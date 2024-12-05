@@ -1,0 +1,13 @@
+faiss-cpu==1.8.0
+sentence_transformers==3.2.1
+pandas==2.0.3
+numpy<2
+#jax
+bm25s==0.2.3
+PyStemmer==2.2.0.3
+langchain-text-splitters==0.2.4
+langsmith==0.1.137
+langchain-core==0.2.41
+einops==0.8.0
+cohere==5.11.1
+lingua-language-detector==2.0.2

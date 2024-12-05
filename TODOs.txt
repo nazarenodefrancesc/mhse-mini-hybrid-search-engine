@@ -1,0 +1,41 @@
+[DONE]
+- chunking
+- reranking
+    - per cohere, doppio account, se uno da errore, va sull'altro. DONE, ma da testare facendo tante chiamate
+- openai embedding
+- faiss as a separeted class
+- language detection su motore di ricerca, in indicizzazione e ricerca, per stemming
+- cohere rerank 3.5
+
+[UNDONE]
+- motore di ricerca in repo separato con setup.py
+    - fatto setup.py
+    - va riportato in repo separato e correttamente strutturato in hybrid_search package e poi gli altri file
+- test motore di ricerca https://github.com/beir-cellar/beir
+- implementare filtri
+    - dovrebbe funzionare mettere un metadato in ordin documento, e passare al metodo retrieve il filtro, che poi filtra i documenti
+- chunking implementato, al momento c'è solo la funzione, ma non è usata.
+- function calling, max recursion depth
+- aggiungere documento all'indice, rilevando la lingua [DONE]
+    - c'è un problema in bm25s se i docs sono multilingua, posso usare un solo stemmer alla volta
+    - forse soluzione tradurre sempre i documenti in inglese o nella lingua che più uso
+- persistenza indice
+    - un motore di ricerca per ogni utente
+- menu: https://stackoverflow.com/questions/51125356/proper-way-to-build-menus-with-python-telegram-bot
+- ogni link che aggiungo viene riassunto come ora, ma viene creato:
+    - il titolo, esplicativo
+    - i topic
+    - il riassunto
+    - il link
+    - la data di aggiunta
+    - il riassunto
+- quando si aggiunge un link, viene automaticamente riassunto ed indicizzato.
+    - indicizzo solo il riassunto, mentre come metadato lascio il link
+    - vengono generati altri metadati, come i topic
+- aggiungere funzionalità di restituzione di tutti i link, paginati
+    - /links?page=XX
+- aggiungere possibilità di cercare per topic
+    - /search?topic=XX
+    - chiedo a gpt qualcosa riguardo un topic
+    - SE IL TOPIC NON ESISTE:
+        - vengono estratti i documenti che hanno il topic semanticamente più vicino (chiedo a gpt, fra tutti questi topic e il target, gli N topic più vicini)
