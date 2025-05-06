@@ -76,4 +76,4 @@ for doc, score in zip(results, scores):
 PR e segnalazioni di issue sono ben accetti.
 
 ## Licenza
-Questo progetto è rilasciato sotto licenza MIT.
+Questo progetto è rilasciato sotto licenza Apache 2.0.
