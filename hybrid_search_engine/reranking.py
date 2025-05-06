@@ -109,9 +109,10 @@ if __name__ == "__main__":
     print([f"{idx}) {doc}" for idx, doc in enumerate(sorted_results)])
 
     # Cohere Reranker
-    api_key = "wQlC4qU8qY7uIK7tcBW2ttUh7jJ8d2SXXtwiuxTB"
-    reranker = CohereReranker(api_key)
+    cohere_api_key = os.getenv("COHERE_API_KEY")
+    if not cohere_api_key:
+        raise ValueError("Please set the COHERE_API_KEY environment variable")
+    reranker = CohereReranker(cohere_api_key)
     sorted_results = reranker.rerank(query, documents)
-
     print([f"{idx}) {doc}" for idx, doc in enumerate(sorted_results)])
 
