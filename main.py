@@ -30,8 +30,8 @@ if __name__ == "__main__":
     logging.info("LOADING DOCUMENTS AND INDEXING...")
     # hybrid_search = HybridSearch(documents)
 
+    # hs = HybridSearch(documents, hybrid_search_active=False)
     hs = HybridSearch(documents, hybrid_search_active=True, reranker=reranker, embedding_model=embedding)
-    # hs = HybridSearch(documents, hybrid_search_active=True, reranker=reranker, embedding_model=embedding)
     # hs = HybridSearch(documents, hybrid_search_active=True, reranker=reranker, embedding_model=embedding)
 
     queries = [
