@@ -1,6 +1,6 @@
-# Hybrid Search Engine
+# MHSE - Mini Hybrid Search Engine
 
-Hybrid Search Engine is a Python library and CLI application for performing hybrid searches by combining sparse retrieval (BM25) and dense retrieval (FAISS) with reranking capabilities (Cohere or in-house).
+Mini Hybrid Search Engine is a Python library and CLI application for performing hybrid searches by combining sparse retrieval (BM25) and dense retrieval (FAISS) with reranking capabilities (Cohere or in-house).
 
 ## Features
 
